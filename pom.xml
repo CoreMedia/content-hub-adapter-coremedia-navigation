@@ -12,12 +12,8 @@
 
   <packaging>pom</packaging>
 
+  <groupId>com.coremedia.contenthub.adapters.navigation</groupId>
   <artifactId>content-hub-adapter-navigation</artifactId>
-  <groupId>com.coremedia.contenthub</groupId>
-
-  <properties>
-    <workspace.configuration.dir>../../../../workspace-configuration</workspace.configuration.dir>
-  </properties>
 
   <modules>
     <module>studio-server</module>
