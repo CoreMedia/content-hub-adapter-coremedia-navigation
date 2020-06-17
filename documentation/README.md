@@ -1,4 +1,4 @@
-# <PROJECT_NAME> Manual
+# Content-hub-adapter-navigation Manual
 
 ## Table of Contents
 
