@@ -8,7 +8,7 @@
 
 1. [Installation](installation.md)
 
-    How to administrate GlobalLink extension (especially in CoreMedia Studio).
+    How to administrate the content-hub-adapter-navigation extension (especially in CoreMedia Studio).
 
 1. [Contribute](contribute.md)
 
