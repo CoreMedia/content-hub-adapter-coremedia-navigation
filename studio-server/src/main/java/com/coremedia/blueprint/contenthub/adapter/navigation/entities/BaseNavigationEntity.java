@@ -19,7 +19,7 @@ public class BaseNavigationEntity implements ContentHubObject {
   private Content delegate;
   private String connectionId;
 
-  public BaseNavigationEntity(Content delegate, String connectionId) {
+  BaseNavigationEntity(Content delegate, String connectionId) {
     this.delegate = delegate;
     this.connectionId = connectionId;
 
@@ -64,21 +64,11 @@ public class BaseNavigationEntity implements ContentHubObject {
   }
 
 
-  public Content getDelegate() {
+  Content getDelegate() {
     return delegate;
   }
 
-  public void setDelegate(Content delegate) {
-    this.delegate = delegate;
-  }
-
-  public String getConnectionId() {
+  String getConnectionId() {
     return connectionId;
   }
-
-  public void setConnectionId(String connectionId) {
-    this.connectionId = connectionId;
-  }
-
-
 }

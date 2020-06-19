@@ -21,7 +21,7 @@ public class CoremediaNavigationContentHubAdapterFactory implements ContentHubAd
 
   @Override
   public ContentHubAdapter createAdapter(CoremediaNavigationSettings settings, String connectionID) {
-    return new CoremediaNavigationContentHubAdapter(settings, sitesService, repository, connectionID);
+    return new CoremediaNavigationContentHubAdapter(sitesService, repository, connectionID);
   }
 
   @Inject
@@ -30,7 +30,7 @@ public class CoremediaNavigationContentHubAdapterFactory implements ContentHubAd
   }
 
   @Inject
-  public void setSitesService(@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection") SitesService service) {
+  public void setSitesService(SitesService service) {
     this.sitesService = service;
   }
 

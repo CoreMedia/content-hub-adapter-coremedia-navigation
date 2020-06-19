@@ -41,10 +41,9 @@ public class CoremediaNavigationContentHubAdapter implements ContentHubAdapter {
   private String connectionId;
   private CoremediaNavigationColumnProvider columnProvider;
 
-  public CoremediaNavigationContentHubAdapter(@NonNull CoremediaNavigationSettings settings,
-                                              @NonNull SitesService sitesService,
-                                              @NonNull ContentRepository repository,
-                                              @NonNull String connectionId) {
+  CoremediaNavigationContentHubAdapter(@NonNull SitesService sitesService,
+                                       @NonNull ContentRepository repository,
+                                       @NonNull String connectionId) {
     this.sitesService = sitesService;
     this.contentRepository = repository;
     this.connectionId = connectionId;
@@ -56,6 +55,9 @@ public class CoremediaNavigationContentHubAdapter implements ContentHubAdapter {
     Site site = findSite(contentHubContext).orElseThrow(() -> new ContentHubException("Site can not be empty"));
     Content siteRoot = site.getSiteRootDocument();
     LOGGER.debug("Creating new CoreMediaNavigation rootfolder for name " + site.getName() + " and id " + site.getId());
+    if (siteRoot == null) {
+      throw new RuntimeException("cannot find siteRoot for preferred Site");
+    }
     return new CoremediaNavigationFolder(this.connectionId, siteRoot);
   }
 
@@ -75,10 +77,15 @@ public class CoremediaNavigationContentHubAdapter implements ContentHubAdapter {
   @Override
   public Folder getParent(ContentHubContext contentHubContext, ContentHubObject contentHubObject) throws ContentHubException {
     Content current = contentRepository.getContent(contentHubObject.getId().getExternalId());
-    if (sitesService.getContentSiteAspect(current).getSite().getSiteRootDocument().equals(current)) {
+    Site site = sitesService.getContentSiteAspect(current).getSite();
+    if (site == null || site.getSiteRootDocument() == null || site.getSiteRootDocument().equals(current)) {
       return null;
     }
     Content parentContent = current.getReferrerWithDescriptor(CoremediaNavigationConstants.CMCHANNEL_TYPE, NAVIGATION_PROPERTY);
+    if (parentContent == null) {
+      LOGGER.warn("found content with id " + current.getId() + " without any parent");
+      return null;
+    }
     return new CoremediaNavigationFolder(this.connectionId, parentContent);
   }
 
