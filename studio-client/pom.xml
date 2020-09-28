@@ -7,6 +7,7 @@
     <groupId>com.coremedia.blueprint</groupId>
     <version>1-SNAPSHOT</version>
   </parent>
+
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.coremedia.contenthub.adapters.navigation</groupId>
@@ -56,6 +57,7 @@
       <plugin>
         <groupId>net.jangaroo</groupId>
         <artifactId>jangaroo-maven-plugin</artifactId>
+        <version>${jangaroo.version}</version>
         <extensions>true</extensions>
         <configuration>
           <namespaces>
@@ -67,4 +69,5 @@
       </plugin>
     </plugins>
   </build>
+
 </project>
