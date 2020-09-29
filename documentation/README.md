@@ -1,4 +1,4 @@
-# Content-hub-adapter-navigation Manual
+# The content-hub-adapter-navigation Extension Manual
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@
 >
 >   Read this to re-test your changes.
 >
-> 1. [Release (CoreMedia-only)](release.md)
+> 2. [Release (CoreMedia-only)](release.md)
 >
 >   Read this if you are creating a release of this project.
 

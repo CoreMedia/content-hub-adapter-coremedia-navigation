@@ -9,14 +9,14 @@ Please read the versioning section of the project to see what other CoreMedia ve
 If a project is inactive it means that the development has been discontinued and won't support future CoreMedia versions."
 )
 
-# Content-hub-adapter-navigation
+# Content Hub Adapter Navigation
 
-## Abstract
-The Content-hub-adapter-navigation is providing an overview about the navigation structure of the currently
-used preferred site. Image1 below is showing the expected result.
+The **content-hub-adapter-navigation** is providing an overview about the navigation structure of the currently
+used preferred site, after a successful configuration of the content-hub-adapter. 
 
-![Image1: Studio appearance with configured adapters](documentation/img/editorial/editorial-documentation_1.png)
-  
+## Versioning
+
+To find out which CoreMedia versions are supported by this project, please take look at the releases section or on the existing branches. To find the matching version of your CoreMedia system, please checkout the branch with the corresponding name. For example, if your CoreMedia version is 2007.2, checkout the branch cmcc-10-2007.
 
 ## Documentation & Tutorial
 
@@ -28,7 +28,7 @@ used preferred site. Image1 below is showing the expected result.
 
     for recent changes
 
-* **[Issues](https://github.com/CoreMedia/<PROJECT_REPO>/issues)**
+* **[Issues](https://github.com/CoreMedia/content-hub-adapter-coremedia-navigation/issues)**
 
     for known bugs and feature requests
 
