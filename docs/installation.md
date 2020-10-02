@@ -24,9 +24,9 @@ Depending on what you are setup and your plans, you can integrate this project i
 
 ## Release Download
 
-Go to [Release](https://github.com/CoreMedia/<PROJECT_REPO>/releases) and download the version that matches you CMCC release version.
-
-From the Blueprint workspace's root folder, extract the ZIP file into `modules/extensions`.
+Go to [Release](https://github.com/CoreMedia/content-hub-adapter-coremedia-navigation/releases) and download the version that matches your CMCC release version.
+    
+From the Blueprint workspace root folder, extract the ZIP file into `modules/extensions`.
 
 Continue with [Activate the extension](#activate-the-extension).
 
@@ -35,13 +35,13 @@ The first step to enable the extension, please ensure that the following maven m
 * <WORKSPACE_ROOT>/modules (root pom as parent, packaging pom)
 * <WORKSPACE_ROOT/modules/extensions (modules as parent, packaging pom)
 
-From the Blueprint workspace's root folder, clone this repository or your fork as a submodule into the extensions folder. Make sure to use the branch name that matches your workspace version. A fork is required if you plan to customize the extension.
+From the Blueprint workspace root folder, clone this repository or your fork as a submodule into the extension folder. Make sure to use the branch name that matches your workspace version. A fork is required if you plan to customize the extension.
 
 ```
 $ cd modules/extensions
-$ git submodule add https://github.com/<YOUR_ORGANIZATION>/<PROJECT_REPO>.git <PROJECT_REPO>
+$ git submodule add https://github.com/CoreMedia/content-hub-adapter-coremedia-navigation.git content-hub-adapter-coremedia-navigation
 $ git submodule init
-$ git checkout -b <your-branch-name>
+$ git checkout -b content-hub-adapter-coremedia-navigation
 ```
 
 Continue with [Activate the extension](#activate-the-extension).
@@ -54,7 +54,7 @@ After adapting the configuration run the extension tool in
 
 ```bash
 $ mvn extensions:sync
-$ mvn extensions:sync -Denable=<PROJECT_MVN_MODULE_NAME>
+$ mvn extensions:sync -Denable=content-hub-adapter-coremedia-navigation
 ``` 
 
 This will activate the extension. The extension tool will also set the relative path for the parents of the extension modules.
