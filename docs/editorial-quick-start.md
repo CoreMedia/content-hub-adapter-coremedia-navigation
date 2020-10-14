@@ -11,7 +11,7 @@
 The coremedia-contenthub-adapter is providing a browsable tree of the current (preferred)
 site. The image below is showing the result after successfully configuring the adapter.
 
-![Image1: Studio appearance with configured adapters](img/editorial/editorial-documentation_1.png)
+![Image1: Studio appearance with configured adapters](images/editorial/editorial-documentation_1.png)
 
 # Basic configuration
 The navigation adapter is coming with some minor configuration options (basically the common )

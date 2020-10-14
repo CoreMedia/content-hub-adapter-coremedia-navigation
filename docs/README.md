@@ -1,4 +1,4 @@
-# Content-hub-adapter-navigation Manual
+# The content-hub-adapter-navigation Extension Manual
 
 ## Table of Contents
 
@@ -18,7 +18,7 @@
 >
 >   Read this to re-test your changes.
 >
-> 1. [Release (CoreMedia-only)](release.md)
+> 2. [Release (CoreMedia-only)](release.md)
 >
 >   Read this if you are creating a release of this project.
 
@@ -27,4 +27,4 @@
 * [Used Third-Party Libraries](THIRD-PARTY.txt)
 
     <!-- GitHub Pages is not able to list directory contents. Jump back to GitHub directly.  -->
-    For license texts have a look at [third-party-licenses](https://github.com/CoreMedia/<PROJECT_REPO>/tree/master/docs/third-party-licenses).
+    For license texts have a look at [third-party-licenses](https://github.com/CoreMedia/content-hub-adapter-coremedia-navigation/tree/cmcc-10-2007/docs/third-party-licenses).
