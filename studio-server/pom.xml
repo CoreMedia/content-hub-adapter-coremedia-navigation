@@ -12,8 +12,6 @@
 
   <groupId>com.coremedia.contenthub.adapters.navigation</groupId>
   <artifactId>studio-server.content-hub-adapter-navigation</artifactId>
-  <version>1.0-SNAPSHOT</version>
-
 
   <properties>
     <coremedia.project.extension.for>studio-lib</coremedia.project.extension.for>
