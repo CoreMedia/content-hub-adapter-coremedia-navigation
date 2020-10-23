@@ -10,10 +10,8 @@
     <version>1-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.coremedia.contenthub.adapters.navigation</groupId>
+  <groupId>com.coremedia.blueprint.contenthub</groupId>
   <artifactId>studio-server.content-hub-adapter-navigation</artifactId>
-  <version>1.0-SNAPSHOT</version>
-
 
   <properties>
     <coremedia.project.extension.for>studio-lib</coremedia.project.extension.for>
