@@ -11,8 +11,13 @@ import javax.inject.Inject;
 public class CoremediaNavigationContentHubAdapterFactory implements ContentHubAdapterFactory<CoremediaNavigationSettings> {
 
   private static final String COREMEDIA_NAVIGATION_ID = "coremedia-navigation";
-  private ContentRepository repository;
-  private SitesService sitesService;
+  private final ContentRepository repository;
+  private final SitesService sitesService;
+
+  public CoremediaNavigationContentHubAdapterFactory(ContentRepository repository, SitesService sitesService) {
+    this.repository = repository;
+    this.sitesService = sitesService;
+  }
 
   @Override
   public String getId() {
@@ -23,15 +28,4 @@ public class CoremediaNavigationContentHubAdapterFactory implements ContentHubAd
   public ContentHubAdapter createAdapter(CoremediaNavigationSettings settings, String connectionID) {
     return new CoremediaNavigationContentHubAdapter(sitesService, repository, connectionID);
   }
-
-  @Inject
-  public void setContentRepository(ContentRepository repository) {
-    this.repository = repository;
-  }
-
-  @Inject
-  public void setSitesService(SitesService service) {
-    this.sitesService = service;
-  }
-
 }

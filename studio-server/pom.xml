@@ -19,6 +19,11 @@
 
   <dependencies>
     <dependency>
+      <groupId>com.coremedia.cms</groupId>
+      <artifactId>coremedia-plugin-beansforplugins</artifactId>
+    </dependency>
+
+    <dependency>
       <groupId>com.coremedia.content-hub</groupId>
       <artifactId>content-hub-api</artifactId>
       <scope>provided</scope>
