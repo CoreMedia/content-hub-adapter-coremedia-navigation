@@ -4,18 +4,25 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>com.coremedia.blueprint</groupId>
-    <artifactId>studio-server.blueprint-parent</artifactId>
-    <version>1-SNAPSHOT</version>
-  </parent>
-
   <groupId>com.coremedia.contenthub.adapters.navigation</groupId>
   <artifactId>studio-server.content-hub-adapter-navigation</artifactId>
+  <version>1-SNAPSHOT</version>
 
   <properties>
     <maven.compiler.release>11</maven.compiler.release>
   </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.coremedia.cms</groupId>
+        <artifactId>studio-server-core-bom</artifactId>
+        <version>1-SNAPSHOT</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <dependencies>
     <dependency>
@@ -34,24 +41,8 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.coremedia.cms</groupId>
-      <artifactId>cap-rest-plugins</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <!-- THIRD-PARTY dependencies -->
-    <dependency>
-      <groupId>javax.inject</groupId>
-      <artifactId>javax.inject</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>jakarta.servlet</groupId>
-      <artifactId>jakarta.servlet-api</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -75,7 +66,14 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.1.2</version>
         <executions>
           <execution>
             <id>analyze-dependencies</id>
@@ -84,7 +82,7 @@
             </goals>
             <configuration>
               <failOnWarning>true</failOnWarning>
-              <ignoreNonCompile>true</ignoreNonCompile>
+              <ignoreNonCompile>false</ignoreNonCompile>
             </configuration>
           </execution>
         </executions>
