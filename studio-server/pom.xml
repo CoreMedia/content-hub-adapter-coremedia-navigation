@@ -41,7 +41,7 @@
   <dependencies>
     <dependency>
       <groupId>com.coremedia.cms</groupId>
-      <artifactId>coremedia-plugin-beansforplugins</artifactId>
+      <artifactId>common-beansforplugins</artifactId>
     </dependency>
 
     <dependency>
