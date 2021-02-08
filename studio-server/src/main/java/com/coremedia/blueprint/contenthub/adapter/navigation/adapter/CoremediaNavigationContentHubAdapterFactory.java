@@ -6,8 +6,6 @@ import com.coremedia.cap.multisite.SitesService;
 import com.coremedia.contenthub.api.ContentHubAdapter;
 import com.coremedia.contenthub.api.ContentHubAdapterFactory;
 
-import javax.inject.Inject;
-
 public class CoremediaNavigationContentHubAdapterFactory implements ContentHubAdapterFactory<CoremediaNavigationSettings> {
 
   private static final String COREMEDIA_NAVIGATION_ID = "coremedia-navigation";
