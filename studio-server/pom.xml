@@ -52,7 +52,6 @@
     <dependency>
       <groupId>com.coremedia.cms</groupId>
       <artifactId>common.beans-for-plugins</artifactId>
-      <scope>provided</scope>
     </dependency>
 
     <dependency>
