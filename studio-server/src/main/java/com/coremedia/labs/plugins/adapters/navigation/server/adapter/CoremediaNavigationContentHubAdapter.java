@@ -1,10 +1,5 @@
-package com.coremedia.blueprint.contenthub.adapter.navigation.adapter;
+package com.coremedia.labs.plugins.adapters.navigation.server.adapter;
 
-import com.coremedia.blueprint.contenthub.adapter.navigation.cmnavigation.CoremediaNavigationSettings;
-import com.coremedia.blueprint.contenthub.adapter.navigation.columns.CoremediaNavigationColumnProvider;
-import com.coremedia.blueprint.contenthub.adapter.navigation.constants.CoremediaNavigationConstants;
-import com.coremedia.blueprint.contenthub.adapter.navigation.entities.CoremediaNavigationFolder;
-import com.coremedia.blueprint.contenthub.adapter.navigation.entities.CoremediaNavigationItem;
 import com.coremedia.cap.content.Content;
 import com.coremedia.cap.content.ContentRepository;
 import com.coremedia.cap.multisite.Site;
@@ -20,6 +15,10 @@ import com.coremedia.contenthub.api.Item;
 import com.coremedia.contenthub.api.column.ColumnProvider;
 import com.coremedia.contenthub.api.exception.ContentHubException;
 import com.coremedia.contenthub.api.pagination.PaginationRequest;
+import com.coremedia.labs.plugins.adapters.navigation.server.columns.CoremediaNavigationColumnProvider;
+import com.coremedia.labs.plugins.adapters.navigation.server.constants.CoremediaNavigationConstants;
+import com.coremedia.labs.plugins.adapters.navigation.server.entities.CoremediaNavigationFolder;
+import com.coremedia.labs.plugins.adapters.navigation.server.entities.CoremediaNavigationItem;
 import edu.umd.cs.findbugs.annotations.NonNull;
 import edu.umd.cs.findbugs.annotations.Nullable;
 import org.slf4j.Logger;
@@ -28,7 +27,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import static com.coremedia.blueprint.contenthub.adapter.navigation.constants.CoremediaNavigationConstants.NAVIGATION_PROPERTY;
+import static com.coremedia.labs.plugins.adapters.navigation.server.constants.CoremediaNavigationConstants.NAVIGATION_PROPERTY;
 
 
 public class CoremediaNavigationContentHubAdapter implements ContentHubAdapter {
@@ -36,10 +35,10 @@ public class CoremediaNavigationContentHubAdapter implements ContentHubAdapter {
   private static final Logger LOGGER = LoggerFactory.getLogger(CoremediaNavigationContentHubAdapter.class);
 
 
-  private SitesService sitesService;
-  private ContentRepository contentRepository;
-  private String connectionId;
-  private CoremediaNavigationColumnProvider columnProvider;
+  private final SitesService sitesService;
+  private final ContentRepository contentRepository;
+  private final String connectionId;
+  private final CoremediaNavigationColumnProvider columnProvider;
 
   CoremediaNavigationContentHubAdapter(@NonNull SitesService sitesService,
                                        @NonNull ContentRepository repository,
@@ -91,7 +90,7 @@ public class CoremediaNavigationContentHubAdapter implements ContentHubAdapter {
 
   @Override
   public ContentHubTransformer transformer() {
-    return null;
+    return (item, contentHubAdapter, contentHubContext) -> null;
   }
 
   @Override
@@ -140,4 +139,5 @@ public class CoremediaNavigationContentHubAdapter implements ContentHubAdapter {
             .filter(s -> s.getName().equals(contentHubContext.getSiteName()) && s.getLocale().equals(contentHubContext.getSiteLocale()))
             .findFirst();
   }
+
 }

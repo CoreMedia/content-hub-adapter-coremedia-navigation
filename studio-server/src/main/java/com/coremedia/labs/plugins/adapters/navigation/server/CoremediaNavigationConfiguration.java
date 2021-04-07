@@ -1,9 +1,9 @@
-package com.coremedia.blueprint.contenthub.adapter.navigation.cmnavigation;
+package com.coremedia.labs.plugins.adapters.navigation.server;
 
-import com.coremedia.blueprint.contenthub.adapter.navigation.adapter.CoremediaNavigationContentHubAdapterFactory;
 import com.coremedia.cap.common.CapConnection;
 import com.coremedia.cap.multisite.SitesService;
 import com.coremedia.cms.common.plugins.beans_for_plugins.CommonBeansForPluginsConfiguration;
+import com.coremedia.labs.plugins.adapters.navigation.server.adapter.CoremediaNavigationContentHubAdapterFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;

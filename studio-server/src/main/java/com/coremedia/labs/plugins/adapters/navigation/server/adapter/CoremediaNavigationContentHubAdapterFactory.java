@@ -1,10 +1,10 @@
-package com.coremedia.blueprint.contenthub.adapter.navigation.adapter;
+package com.coremedia.labs.plugins.adapters.navigation.server.adapter;
 
-import com.coremedia.blueprint.contenthub.adapter.navigation.cmnavigation.CoremediaNavigationSettings;
 import com.coremedia.cap.content.ContentRepository;
 import com.coremedia.cap.multisite.SitesService;
 import com.coremedia.contenthub.api.ContentHubAdapter;
 import com.coremedia.contenthub.api.ContentHubAdapterFactory;
+import com.coremedia.labs.plugins.adapters.navigation.server.CoremediaNavigationSettings;
 
 public class CoremediaNavigationContentHubAdapterFactory implements ContentHubAdapterFactory<CoremediaNavigationSettings> {
 

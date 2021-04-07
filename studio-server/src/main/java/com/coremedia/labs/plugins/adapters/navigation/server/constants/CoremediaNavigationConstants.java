@@ -1,4 +1,4 @@
-package com.coremedia.blueprint.contenthub.adapter.navigation.constants;
+package com.coremedia.labs.plugins.adapters.navigation.server.constants;
 
 public abstract class CoremediaNavigationConstants {
 
