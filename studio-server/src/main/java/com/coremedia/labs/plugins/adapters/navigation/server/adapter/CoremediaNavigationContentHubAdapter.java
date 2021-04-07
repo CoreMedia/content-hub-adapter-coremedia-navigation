@@ -1,26 +1,24 @@
-package com.coremedia.blueprint.contenthub.adapter.navigation.adapter;
+package com.coremedia.labs.plugins.adapters.navigation.server.adapter;
 
-import com.coremedia.blueprint.contenthub.adapter.navigation.columns.CoremediaNavigationColumnProvider;
-import com.coremedia.blueprint.contenthub.adapter.navigation.constants.CoremediaNavigationConstants;
-import com.coremedia.blueprint.contenthub.adapter.navigation.entities.CoremediaNavigationFolder;
-import com.coremedia.blueprint.contenthub.adapter.navigation.entities.CoremediaNavigationItem;
 import com.coremedia.cap.content.Content;
 import com.coremedia.cap.content.ContentRepository;
 import com.coremedia.cap.multisite.Site;
 import com.coremedia.cap.multisite.SitesService;
 import com.coremedia.contenthub.api.ContentHubAdapter;
-import com.coremedia.contenthub.api.ContentHubContentCreationException;
 import com.coremedia.contenthub.api.ContentHubContext;
 import com.coremedia.contenthub.api.ContentHubObject;
 import com.coremedia.contenthub.api.ContentHubObjectId;
 import com.coremedia.contenthub.api.ContentHubTransformer;
-import com.coremedia.contenthub.api.ContentModel;
 import com.coremedia.contenthub.api.Folder;
 import com.coremedia.contenthub.api.GetChildrenResult;
 import com.coremedia.contenthub.api.Item;
 import com.coremedia.contenthub.api.column.ColumnProvider;
 import com.coremedia.contenthub.api.exception.ContentHubException;
 import com.coremedia.contenthub.api.pagination.PaginationRequest;
+import com.coremedia.labs.plugins.adapters.navigation.server.columns.CoremediaNavigationColumnProvider;
+import com.coremedia.labs.plugins.adapters.navigation.server.constants.CoremediaNavigationConstants;
+import com.coremedia.labs.plugins.adapters.navigation.server.entities.CoremediaNavigationFolder;
+import com.coremedia.labs.plugins.adapters.navigation.server.entities.CoremediaNavigationItem;
 import edu.umd.cs.findbugs.annotations.NonNull;
 import edu.umd.cs.findbugs.annotations.Nullable;
 import org.slf4j.Logger;
@@ -29,7 +27,7 @@ import org.slf4j.LoggerFactory;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-import static com.coremedia.blueprint.contenthub.adapter.navigation.constants.CoremediaNavigationConstants.NAVIGATION_PROPERTY;
+import static com.coremedia.labs.plugins.adapters.navigation.server.constants.CoremediaNavigationConstants.NAVIGATION_PROPERTY;
 
 
 public class CoremediaNavigationContentHubAdapter implements ContentHubAdapter {

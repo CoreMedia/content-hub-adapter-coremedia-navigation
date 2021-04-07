@@ -1,11 +1,11 @@
-package com.coremedia.blueprint.contenthub.adapter.navigation.columns;
+package com.coremedia.labs.plugins.adapters.navigation.server.columns;
 
-import com.coremedia.blueprint.contenthub.adapter.navigation.entities.BaseNavigationEntity;
 import com.coremedia.contenthub.api.ContentHubObject;
 import com.coremedia.contenthub.api.Folder;
 import com.coremedia.contenthub.api.column.Column;
 import com.coremedia.contenthub.api.column.ColumnValue;
 import com.coremedia.contenthub.api.column.DefaultColumnProvider;
+import com.coremedia.labs.plugins.adapters.navigation.server.entities.BaseNavigationEntity;
 
 import java.util.ArrayList;
 import java.util.List;

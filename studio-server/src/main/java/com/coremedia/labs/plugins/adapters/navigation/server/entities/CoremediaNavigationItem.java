@@ -1,4 +1,4 @@
-package com.coremedia.blueprint.contenthub.adapter.navigation.entities;
+package com.coremedia.labs.plugins.adapters.navigation.server.entities;
 
 import com.coremedia.cap.content.Content;
 import com.coremedia.contenthub.api.Item;

@@ -1,18 +1,21 @@
-package com.coremedia.blueprint.contenthub.adapter.navigation.adapter;
+package com.coremedia.labs.plugins.adapters.navigation.server.adapter;
 
-import com.coremedia.blueprint.contenthub.adapter.navigation.cmnavigation.CoremediaNavigationSettings;
 import com.coremedia.cap.content.ContentRepository;
 import com.coremedia.cap.multisite.SitesService;
 import com.coremedia.contenthub.api.ContentHubAdapter;
 import com.coremedia.contenthub.api.ContentHubAdapterFactory;
-
-import javax.inject.Inject;
+import com.coremedia.labs.plugins.adapters.navigation.server.CoremediaNavigationSettings;
 
 public class CoremediaNavigationContentHubAdapterFactory implements ContentHubAdapterFactory<CoremediaNavigationSettings> {
 
   private static final String COREMEDIA_NAVIGATION_ID = "coremedia-navigation";
-  private ContentRepository repository;
-  private SitesService sitesService;
+  private final ContentRepository repository;
+  private final SitesService sitesService;
+
+  public CoremediaNavigationContentHubAdapterFactory(ContentRepository repository, SitesService sitesService) {
+    this.repository = repository;
+    this.sitesService = sitesService;
+  }
 
   @Override
   public String getId() {
@@ -23,15 +26,4 @@ public class CoremediaNavigationContentHubAdapterFactory implements ContentHubAd
   public ContentHubAdapter createAdapter(CoremediaNavigationSettings settings, String connectionID) {
     return new CoremediaNavigationContentHubAdapter(sitesService, repository, connectionID);
   }
-
-  @Inject
-  public void setContentRepository(ContentRepository repository) {
-    this.repository = repository;
-  }
-
-  @Inject
-  public void setSitesService(SitesService service) {
-    this.sitesService = service;
-  }
-
 }

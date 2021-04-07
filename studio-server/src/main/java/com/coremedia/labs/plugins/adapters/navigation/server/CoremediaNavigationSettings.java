@@ -1,4 +1,4 @@
-package com.coremedia.blueprint.contenthub.adapter.navigation.cmnavigation;
+package com.coremedia.labs.plugins.adapters.navigation.server;
 
 public interface CoremediaNavigationSettings {
 
